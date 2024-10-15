@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
+  },
+  "scripts": {
+    "start": "npx tsc src/datasource.ts && node src/datasource.js",
+    "mariadb:open": "docker exec -it first-nest-api-mariadb-1 mariadb -u root -p",
+    "seed": "ts-node --project ./tsconfig.json ../node_modules/typeorm-extension/bin/cli.cjs seed:run -d src/datasource.ts"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/mysql": "^2.15.26",
+    "@types/node": "^22.7.5",
+    "mysql": "^2.18.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
