@@ -16,10 +16,13 @@ FLUSH PRIVILEGES;
 instead of lab5@test and password write your data.
 
 ### Check if the prevelegies have been applied
-```SHOW GRANTS FOR 'lab5@test';```
+```SHOW GRANTS FOR '[lab5@test]';```
 
 ### In case you want to delete a MariaDB User
-```DROP USER 'user1'@localhost;```
+```DROP USER '[lab5@test]';```
 
 ### Exit the mysql
 ```exit```
+
+### Conclusion
+All other code, for example creating a table or inserting some data, you write directly in your code (in my case, i used src/datasource.js)
